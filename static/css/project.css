@@ -1,6 +1,19 @@
+body{
+  /* background-image: url('https://wallpaperaccess.com/full/1248201.jpg'); */
+  background-image: url('output-onlinepngtools\ \(1\).png');
+}
+
+div.navbar{
+  background-color: whitesmoke;
+}
+
+div.upper{
+  background-color: gray;
+}
+
 h1{
     text-align: center;
-    color: gray;
+    color: white;
     margin: 10px;;
 }
 
@@ -9,8 +22,11 @@ ul {
   margin: 0;
   padding: 0;
   overflow: auto;
-  background-color:rgb(82, 82, 82);
+  background-color: whitesmoke;
+  
 }
+
+
 
 li {
   float: left;
@@ -30,52 +46,24 @@ li a:hover {
 
 p{
     text-align: center;
-    color: gray;
+    color: white;
     margin: 10px;
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    margin: auto;
- }
 
- .wrapper {
-    display: grid;
-    grid-template-columns: 500px 500px;
-    grid-gap: 10px;
-    background-color: #fff;
-    color: #444;
-    justify-content: center;
-    margin: 10px;
-    overflow: auto;
-    
-  }
+a:link {
+  color: blue);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: gray;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
 
-  .box {
-    background-color: #444;
-    color: #fff;
-    border-radius: 5px;
-    padding: 20px;
-    font-size: 75%;
-    justify-content: center;
-    text-align: center;
-  }
-
-
-
-        a:link {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:visited {
-    color: rgb(236, 255, 254);
-    background-color: transparent;
-    text-decoration: none;
-  }
-  a:hover {
-    color: blue;
-    background-color: transparent;
-    text-decoration: none;
-  }
