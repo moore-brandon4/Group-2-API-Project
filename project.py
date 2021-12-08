@@ -2,10 +2,19 @@
 #pip install flask
 import requests
 import pokepy
+import json
+
 
 response=requests.get("https://pokeapi.co/api/v2/pokemon/ditto")
 print(response.status_code)
-print(response.json())
+
+def jprint(obj):
+    # create a formatted string of the Python JSON object
+    text = json.dumps(obj, sort_keys=True, indent=4)
+    print(text)
+
+jprint(response.json())
+
 
 #client = pokepy.V2Client()
 #client.get_pokemon()
