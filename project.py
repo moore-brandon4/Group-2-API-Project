@@ -36,14 +36,16 @@ def index_post():
     urlBeforeString="https://pokeapi.co/api/v2/pokemon/"+variable
     url=str(urlBeforeString)
     print(url)
-    response=requests.get(url)
+    #response=requests.get(url)
+    r = requests.get(url)
+    pretty_json = json.loads(r.text)
+    print (json.dumps(pretty_json, sort_keys=True, indent=4))
     # print(response)
-    def jprint(obj):
-       text = json.dumps(obj, sort_keys=True, indent=4)
-       print(text)
-    results = jprint(response.json())
-    results = str(results)
-    return render_template("index_post.html", results=results)
+    #def jprint(obj):
+       #text = json.dumps(obj, sort_keys=True)
+       #print(text)
+    #jprint(response.json())
+    return render_template("index_post.html", pretty_json=pretty_json)
 
 
 if __name__=="__main__":
