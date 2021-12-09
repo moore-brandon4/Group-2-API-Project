@@ -38,12 +38,18 @@ def index_post():
     print(url)
     response=requests.get(url)
     # print(response)
-    # def jprint(obj):
-    #     text = json.dumps(obj, sort_keys=True, indent=4)
-    #     print(text)
-    # jprint(response.json())
-    return render_template("index_post.html", url=url)
+    def jprint(obj):
+       text = json.dumps(obj, sort_keys=True, indent=4)
+       print(text)
+    results = jprint(response.json())
+    results = str(results)
+    return render_template("index_post.html", results=results)
 
 
 if __name__=="__main__":
     project.run(debug=True)              
+
+    # def jprint(obj):
+    #    text = json.dumps(obj, sort_keys=True, indent=4)
+    #    print(text)
+    # jprint(response.json())
