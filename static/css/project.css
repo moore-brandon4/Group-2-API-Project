@@ -11,6 +11,10 @@ div.upper{
   background-color: gray;
 }
 
+div.output p{
+  color:blue;
+}
+
 h1{
     text-align: center;
     color: white;

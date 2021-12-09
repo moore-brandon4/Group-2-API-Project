@@ -41,8 +41,8 @@ def index_post():
     def jprint(obj):
         text = json.dumps(obj, sort_keys=True, indent=4)
         print(text)
-    #jprint(response.json())
-    return render_template("index.html")
+    output=jprint(response.json())
+    return render_template("index_post.html")
 
 
 if __name__=="__main__":
