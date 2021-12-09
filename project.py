@@ -27,10 +27,10 @@ project = Flask(__name__)
 
 
 @project.route("/")                          
-def index():                    
+def index():             
     return render_template("index.html")
 
-@project.route('/', methods=['POST'])
+@project.route('/', methods=['GET', 'POST'])
 def index_post():
     variable = request.form['variable']
     urlBeforeString="https://pokeapi.co/api/v2/pokemon/"+variable
@@ -41,8 +41,8 @@ def index_post():
     def jprint(obj):
         text = json.dumps(obj, sort_keys=True, indent=4)
         print(text)
-    output=jprint(response.json())
-    return render_template("index_post.html")
+    text = jprint(response.json())
+    return render_template("index_post.html", text=text)
 
 
 if __name__=="__main__":
