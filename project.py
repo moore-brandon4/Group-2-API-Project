@@ -42,14 +42,15 @@ def index_post():
     #Gets the url data from the api and prints the json data onto the post html page
     r = requests.get(url)
     pretty_json = json.loads(r.text)
-    
+    results4 = pretty_json["forms"][0]["name"]
+    #print("Results for: " + pretty_json.forms.name)
     #print (json.dumps(pretty_json, sort_keys=True, indent=4))
     # print(response)
     #def jprint(obj):
        #text = json.dumps(obj, sort_keys=True)
        #print(text)
     #jprint(response.json())
-    return render_template("index_post.html", pretty_json=pretty_json)
+    return render_template("index_post.html", pretty_json=pretty_json, results4=results4)
 
 
 if __name__=="__main__":

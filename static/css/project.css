@@ -18,12 +18,16 @@ div.upper{
   background-color: gray;
 }
 
-div.my-form p{
+div.my-form p {
   color:blue;
   background-color: white;
 }
 
 div.results p{
+  color: blue;
+}
+
+div.results h1{
   color: blue;
 }
 
