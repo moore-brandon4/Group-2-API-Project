@@ -32,14 +32,18 @@ def index():
 
 @project.route('/', methods=['GET', 'POST'])
 def index_post():
+    #Form that takes user variable from html and creates the url to send to the api
     variable = request.form['variable']
     urlBeforeString="https://pokeapi.co/api/v2/pokemon/"+variable
     url=str(urlBeforeString)
     print(url)
     #response=requests.get(url)
+
+    #Gets the url data from the api and prints the json data onto the post html page
     r = requests.get(url)
     pretty_json = json.loads(r.text)
-    print (json.dumps(pretty_json, sort_keys=True, indent=4))
+    
+    #print (json.dumps(pretty_json, sort_keys=True, indent=4))
     # print(response)
     #def jprint(obj):
        #text = json.dumps(obj, sort_keys=True)
@@ -51,7 +55,4 @@ def index_post():
 if __name__=="__main__":
     project.run(debug=True)              
 
-    # def jprint(obj):
-    #    text = json.dumps(obj, sort_keys=True, indent=4)
-    #    print(text)
-    # jprint(response.json())
+   
