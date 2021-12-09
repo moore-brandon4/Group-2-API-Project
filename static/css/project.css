@@ -12,6 +12,8 @@ div.navbar{
   background-color: whitesmoke;
 }
 
+
+
 div.upper{
   background-color: gray;
 }
@@ -19,6 +21,10 @@ div.upper{
 div.my-form p{
   color:blue;
   background-color: white;
+}
+
+div.results p{
+  color: blue;
 }
 
 h1{
