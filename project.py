@@ -37,7 +37,7 @@ def index_post():
     url=str(urlBeforeString)
     print(url)
     response=requests.get(url)
-    print(response)
+    # print(response)
     # def jprint(obj):
     #     text = json.dumps(obj, sort_keys=True, indent=4)
     #     print(text)
