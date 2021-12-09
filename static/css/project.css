@@ -3,6 +3,11 @@ body{
   background-image: url('output-onlinepngtools\ \(1\).png');
 }
 
+form{
+  text-align: center;
+}
+
+
 div.navbar{
   background-color: whitesmoke;
 }
@@ -11,8 +16,9 @@ div.upper{
   background-color: gray;
 }
 
-div.output p{
+div.my-form p{
   color:blue;
+  background-color: white;
 }
 
 h1{

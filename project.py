@@ -1,7 +1,7 @@
 #python --version
 #pip install flask
 import requests
-import pokepy
+#import pokepy
 import json
 
 
